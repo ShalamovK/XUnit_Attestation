@@ -1,0 +1,16 @@
+C:\Users\Kirill\source\repos\XUnitTestApp\Data\bin\Debug\netcoreapp3.1\Data.deps.json
+C:\Users\Kirill\source\repos\XUnitTestApp\Data\bin\Debug\netcoreapp3.1\Data.dll
+C:\Users\Kirill\source\repos\XUnitTestApp\Data\obj\Debug\netcoreapp3.1\Data.AssemblyInfoInputs.cache
+C:\Users\Kirill\source\repos\XUnitTestApp\Data\obj\Debug\netcoreapp3.1\Data.AssemblyInfo.cs
+C:\Users\Kirill\source\repos\XUnitTestApp\Data\obj\Debug\netcoreapp3.1\Data.csprojAssemblyReference.cache
+C:\Users\Kirill\source\repos\XUnitTestApp\Data\bin\Debug\netcoreapp3.1\Data.runtimeconfig.json
+C:\Users\Kirill\source\repos\XUnitTestApp\Data\bin\Debug\netcoreapp3.1\Data.runtimeconfig.dev.json
+C:\Users\Kirill\source\repos\XUnitTestApp\Data\obj\Debug\netcoreapp3.1\Data.genruntimeconfig.cache
+C:\Users\Kirill\source\repos\XUnitTestApp\Data\bin\Debug\netcoreapp3.1\Data.pdb
+C:\Users\Kirill\source\repos\XUnitTestApp\Data\obj\Debug\netcoreapp3.1\Data.dll
+C:\Users\Kirill\source\repos\XUnitTestApp\Data\obj\Debug\netcoreapp3.1\Data.pdb
+C:\Users\Kirill\source\repos\XUnitTestApp\Data\bin\Debug\netcoreapp3.1\Common.dll
+C:\Users\Kirill\source\repos\XUnitTestApp\Data\bin\Debug\netcoreapp3.1\Common.pdb
+C:\Users\Kirill\source\repos\XUnitTestApp\Data\obj\Debug\netcoreapp3.1\Data.csproj.CopyComplete
+C:\Users\Kirill\source\repos\XUnitTestApp\Data\bin\Debug\netcoreapp3.1\Data.dll.config
+C:\Users\Kirill\source\repos\XUnitTestApp\Data\obj\Debug\netcoreapp3.1\Data.csproj.CoreCompileInputs.cache

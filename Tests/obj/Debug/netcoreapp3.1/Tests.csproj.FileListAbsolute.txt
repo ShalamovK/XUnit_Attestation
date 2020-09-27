@@ -1,0 +1,12 @@
+C:\Users\Kirill\source\repos\XUnitTestApp\Tests\bin\Debug\netcoreapp3.1\Tests.deps.json
+C:\Users\Kirill\source\repos\XUnitTestApp\Tests\bin\Debug\netcoreapp3.1\Tests.dll
+C:\Users\Kirill\source\repos\XUnitTestApp\Tests\obj\Debug\netcoreapp3.1\Tests.csprojAssemblyReference.cache
+C:\Users\Kirill\source\repos\XUnitTestApp\Tests\obj\Debug\netcoreapp3.1\Tests.AssemblyInfoInputs.cache
+C:\Users\Kirill\source\repos\XUnitTestApp\Tests\obj\Debug\netcoreapp3.1\Tests.AssemblyInfo.cs
+C:\Users\Kirill\source\repos\XUnitTestApp\Tests\bin\Debug\netcoreapp3.1\Tests.runtimeconfig.json
+C:\Users\Kirill\source\repos\XUnitTestApp\Tests\bin\Debug\netcoreapp3.1\Tests.runtimeconfig.dev.json
+C:\Users\Kirill\source\repos\XUnitTestApp\Tests\obj\Debug\netcoreapp3.1\Tests.genruntimeconfig.cache
+C:\Users\Kirill\source\repos\XUnitTestApp\Tests\bin\Debug\netcoreapp3.1\Tests.pdb
+C:\Users\Kirill\source\repos\XUnitTestApp\Tests\obj\Debug\netcoreapp3.1\Tests.dll
+C:\Users\Kirill\source\repos\XUnitTestApp\Tests\obj\Debug\netcoreapp3.1\Tests.pdb
+C:\Users\Kirill\source\repos\XUnitTestApp\Tests\obj\Debug\netcoreapp3.1\Tests.csproj.CoreCompileInputs.cache
