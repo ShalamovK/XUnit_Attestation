@@ -13,11 +13,7 @@ namespace Data {
         private IInvoiceRepository _invoiceRepository;
         private IInvoiceLineRepository _invoiceLineRepository;
 
-        public UnitOfWork(string connectionString) {
-            if (connectionString == null) {
-                throw new ArgumentNullException("connectionString");
-            }
-
+        public UnitOfWork() {
             _dbContext = new AppContext();
         }
 

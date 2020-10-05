@@ -2,13 +2,9 @@
 using Common.Contracts.Services;
 using Data;
 using Logic;
-using Microsoft.AspNetCore.Hosting;
+using Logic.Services;
 using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Web.Http;
 using Unity;
 using Unity.Injection;

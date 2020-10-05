@@ -12,10 +12,10 @@ namespace Data.Repos.Base {
         where TEnt : BaseEntity<TKey>
         where TKey : IEquatable<TKey> {
 
-        protected AppContext DbContext { get; private set; }
+        protected DbContext DbContext { get; private set; }
         protected DbSet<TEnt> DbSet { get; set; }
 
-        public BaseRepository(AppContext dbContext) {
+        public BaseRepository(DbContext dbContext) {
             DbContext = dbContext ?? throw new ArgumentNullException("dbContext");
             DbSet = DbContext.Set<TEnt>();
         }

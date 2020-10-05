@@ -1,6 +1,5 @@
 C:\Users\Kirill\source\repos\XUnitTestApp\Common\bin\Debug\netcoreapp3.1\Common.deps.json
 C:\Users\Kirill\source\repos\XUnitTestApp\Common\bin\Debug\netcoreapp3.1\Common.dll
-C:\Users\Kirill\source\repos\XUnitTestApp\Common\obj\Debug\netcoreapp3.1\Common.csprojAssemblyReference.cache
 C:\Users\Kirill\source\repos\XUnitTestApp\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
 C:\Users\Kirill\source\repos\XUnitTestApp\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
 C:\Users\Kirill\source\repos\XUnitTestApp\Common\bin\Debug\netcoreapp3.1\Common.runtimeconfig.json
@@ -10,3 +9,4 @@ C:\Users\Kirill\source\repos\XUnitTestApp\Common\bin\Debug\netcoreapp3.1\Common.
 C:\Users\Kirill\source\repos\XUnitTestApp\Common\obj\Debug\netcoreapp3.1\Common.dll
 C:\Users\Kirill\source\repos\XUnitTestApp\Common\obj\Debug\netcoreapp3.1\Common.pdb
 C:\Users\Kirill\source\repos\XUnitTestApp\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
+C:\Users\Kirill\source\repos\XUnitTestApp\Common\obj\Debug\netcoreapp3.1\Common.csprojAssemblyReference.cache

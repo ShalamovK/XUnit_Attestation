@@ -1,0 +1,20 @@
+﻿@using XUnitTestWebApp.Models
+
+@model List<InvoiceViewModel>
+
+<table class="table table-striped">
+    <thead>
+        <tr>Id</tr>
+        <tr>Price</tr>
+        <tr>Balance</tr>
+    </thead>
+    <tbody>
+        @foreach (var invoice in Model) {
+            <tr>
+                <td>@invoice.Id.ToString()</td>
+                <td>@invoice.Price.ToString("C2")</td>
+                <td>@invoice.Balance.ToString("C2")</td>
+            </tr>
+        }
+    </tbody>
+</table>

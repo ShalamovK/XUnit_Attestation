@@ -14,4 +14,4 @@ C:\Users\Kirill\source\repos\XUnitTestApp\Logic\bin\Debug\netcoreapp3.1\Data.dll
 C:\Users\Kirill\source\repos\XUnitTestApp\Logic\bin\Debug\netcoreapp3.1\Common.pdb
 C:\Users\Kirill\source\repos\XUnitTestApp\Logic\bin\Debug\netcoreapp3.1\Data.pdb
 C:\Users\Kirill\source\repos\XUnitTestApp\Logic\obj\Debug\netcoreapp3.1\Logic.csproj.CopyComplete
-C:\Users\Kirill\source\repos\XUnitTestApp\Logic\bin\Debug\netcoreapp3.1\Data.dll.config
+C:\Users\Kirill\source\repos\XUnitTestApp\Logic\obj\Debug\netcoreapp3.1\Logic.csproj.CoreCompileInputs.cache

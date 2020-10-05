@@ -1,0 +1,21 @@
+﻿@{ 
+    ViewBag.Title = "Invoices";
+}
+
+<div class="container">
+    <div class="row">
+        <div id="invoicesTable" class="col-sm-12">
+        </div>
+        <div class="col-sm-12">
+            <partial name="Partials/_CreateInvoicePartial" model="InvoiceViewModel.CreateDefault()" />
+        </div>
+    </div>
+</div>
+
+@section scripts {
+
+<script>
+    InitInvoices();
+</script>
+
+}

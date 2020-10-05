@@ -1,15 +1,17 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Configuration;
 using System.Web.Http;
+using AutoMapper;
+using Common.Contracts;
+using Common.Contracts.Services;
+using Data;
+using Logic.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using XUnitTestWebApp.App_Start;
 
 namespace XUnitTestWebApp {
     public class Startup {
@@ -23,10 +25,21 @@ namespace XUnitTestWebApp {
         public void ConfigureServices(IServiceCollection services) {
             services.AddControllersWithViews();
             services.AddHttpContextAccessor();
+
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new AutoMapperProfile());
+            });
+
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IInvoiceService, InvoiceService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IHttpContextAccessor httpContextAccessor, IApplicationBuilder app, IWebHostEnvironment env) {
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
             } else {
@@ -35,9 +48,8 @@ namespace XUnitTestWebApp {
                 app.UseHsts();
             }
 
-            UnityConfig.RegisterComponents(httpContextAccessor, GlobalConfiguration.Configuration);
-
             app.UseHttpsRedirection();
+            app.UseDefaultFiles();
             app.UseStaticFiles();
 
             app.UseRouting();

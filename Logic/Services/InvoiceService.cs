@@ -1,14 +1,17 @@
-﻿using Common.Contracts;
+﻿using AutoMapper;
+using Common.Contracts;
 using Common.Contracts.Services;
 using Common.Models.Dtos;
 using Common.Models.Entities;
 using Logic.Services.Base;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Logic.Services {
     public class InvoiceService : BaseService, IInvoiceService {
-        public InvoiceService(IServiceHost serviceHost, IUnitOfWork unitOfWork) : base(serviceHost, unitOfWork) {
+        public InvoiceService(IMapper mapper, IServiceProvider serviceHost, IUnitOfWork unitOfWork) : base(mapper, serviceHost, unitOfWork) {
         }
 
         public void CreateInvoice(InvoiceDto invoice, out Guid? newId) {
@@ -33,6 +36,14 @@ namespace Logic.Services {
 
             newId = newInvoice.Id;
             return;
+        }
+
+        public List<InvoiceDto> GetInvoices() {
+            List<Invoice> invoices = _unitOfWork.Invoices.GetAll()
+                .Include(x => x.Lines)
+                .ToList();
+
+            return _mapper.Map<List<InvoiceDto>>(invoices);
         }
     }
 }
