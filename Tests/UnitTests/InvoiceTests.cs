@@ -82,56 +82,6 @@ namespace XUnitTestWebApp.Tests.UnitTests {
             Assert.Equal(balanceSignExpected, sign);
         }
 
-        [Fact]
-        public void Test_Invoice_Saving() {
-            Invoice invoice = new Invoice {
-                Id = Guid.NewGuid(),
-                Lines = new List<InvoiceLine> {
-                    new InvoiceLine {
-                        Id = Guid.NewGuid(),
-                        Description = "Test Line",
-                        Qty = 5,
-                        Rate = 12
-                    }
-                },
-            };
-
-            var unitOfWork = new TestUnitOfWork();
-
-            unitOfWork.Invoices.Add(invoice);
-            unitOfWork.Commit();
-
-            Invoice result = unitOfWork.Invoices.GetById(invoice.Id);
-
-            Assert.NotNull(result);
-        }
-
-        [Fact]
-        public void Test_Invoice_Saving1() {
-            Guid lineId = Guid.NewGuid();
-
-            Invoice invoice = new Invoice {
-                Id = Guid.NewGuid(),
-                Lines = new List<InvoiceLine> {
-                    new InvoiceLine {
-                        Id = lineId,
-                        Description = "Test Line XUnit",
-                        Qty = 5,
-                        Rate = 12
-                    }
-                },
-            };
-
-            var unitOfWork = new UnitOfWork();
-
-            unitOfWork.Invoices.Add(invoice);
-            unitOfWork.Commit();
-
-            InvoiceLine result = unitOfWork.InvoiceLines.GetById(lineId);
-
-            Assert.NotNull(result);
-        }
-
         #region [ HELPERS ]
 
         public static IEnumerable<object[]> GetTestBalanceData {

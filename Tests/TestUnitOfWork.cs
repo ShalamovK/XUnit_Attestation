@@ -11,6 +11,7 @@ namespace XUnitTestWebApp.Tests {
 
         private IInvoiceRepository _invoiceRepository;
         private IInvoiceLineRepository _invoiceLineRepository;
+        private IPaymentRepository _paymentRepository;
 
         public TestUnitOfWork() {
             _dbContext = new TestContext();
@@ -30,6 +31,10 @@ namespace XUnitTestWebApp.Tests {
 
         public IInvoiceLineRepository InvoiceLines {
             get { return _invoiceLineRepository ??= new InvoiceLineRepository(_dbContext); }
+        }
+
+        public IPaymentRepository Payments {
+            get { return _paymentRepository ??= new PaymentRepository(_dbContext); }
         }
 
         public void Commit() {

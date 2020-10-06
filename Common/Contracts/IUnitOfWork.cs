@@ -7,6 +7,7 @@ namespace Common.Contracts {
         DbContext DbContext { get; }
         IInvoiceRepository Invoices { get; }
         IInvoiceLineRepository InvoiceLines { get; }
+        IPaymentRepository Payments { get; }
 
         void Commit();
         Task CommitAsync();

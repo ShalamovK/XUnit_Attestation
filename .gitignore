@@ -1,0 +1,11 @@
+*.suo
+*.user
+*.nuspec
+bin
+obj
+packages
+.vs
+/trunk/CostcoDirect.Web/App_Data/logs/*
+/trunk/CostcoDirect.Web/App_Data/logs
+data
+/docs/*.csv

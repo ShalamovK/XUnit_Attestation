@@ -45,5 +45,25 @@ namespace Logic.Services {
 
             return _mapper.Map<List<InvoiceDto>>(invoices);
         }
+
+        public decimal UpdateInvoiceBalance(Guid id) {
+            Invoice invoice = _GetInvoice(id);
+
+            if (invoice == null) return 0m;
+
+            decimal balance = invoice.UpdatePricing();
+            _unitOfWork.Commit();
+
+            return balance;
+        }
+
+        private Invoice _GetInvoice(Guid id) {
+            Invoice invoice = _unitOfWork.Invoices.GetAll()
+                .Include(x => x.Payments).ThenInclude(p => p.Refunds)
+                .Include(x => x.Lines)
+                .FirstOrDefault(x => x.Id == id);
+
+            return invoice;
+        }
     }
 }
