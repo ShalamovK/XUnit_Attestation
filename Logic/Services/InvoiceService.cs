@@ -38,6 +38,13 @@ namespace Logic.Services {
             return;
         }
 
+        public InvoiceDto GetInvoice(Guid id) {
+            Invoice invoice = _unitOfWork.Invoices.GetById(id);
+            if (invoice == null) return null;
+
+            return _mapper.Map<InvoiceDto>(invoice);
+        }
+
         public List<InvoiceDto> GetInvoices() {
             List<Invoice> invoices = _unitOfWork.Invoices.GetAll()
                 .Include(x => x.Lines)

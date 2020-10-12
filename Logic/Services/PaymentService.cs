@@ -29,7 +29,8 @@ namespace Logic.Services {
             _unitOfWork.Payments.Add(newPayment);
             _unitOfWork.Commit();
 
-            _serviceHost.GetRequiredService<IInvoiceService>().UpdateInvoiceBalance(payment.InvoiceId);
+            var service = _serviceHost.GetRequiredService<IInvoiceService>();
+            service.UpdateInvoiceBalance(payment.InvoiceId);
 
             return new BaseResponse(true);
         }

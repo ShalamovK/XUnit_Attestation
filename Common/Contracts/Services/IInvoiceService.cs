@@ -7,6 +7,7 @@ namespace Common.Contracts.Services {
     public interface IInvoiceService : IService {
         void CreateInvoice(InvoiceDto invoice, out Guid? newId);
         decimal UpdateInvoiceBalance(Guid id);
+        InvoiceDto GetInvoice(Guid id);
         List<InvoiceDto> GetInvoices();
     }
 }

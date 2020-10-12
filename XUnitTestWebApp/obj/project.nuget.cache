@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BF/n96n3I+2nRkdFgxhn03oUjzzOjBeSksmPJB6UAyOTFdieeFAkTSxN06pPBHck/NSI5b4MzujRGqLFxein+Q==",
+  "dgSpecHash": "+4wFGk9IaxhbWouuAO8WJXG/wVKTaI9Wt24uopxKssMoL3CvQoUlu0C1ZPlsyg+AGm/AQ8ZIK/DpiBqGtrBEVg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kirill\\source\\repos\\XUnitTestApp\\XUnitTestWebApp\\XUnitTestWebApp.csproj",
   "expectedPackageFiles": [
@@ -25,6 +25,7 @@
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.8\\microsoft.entityframeworkcore.abstractions.3.1.8.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.8\\microsoft.entityframeworkcore.analyzers.3.1.8.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.8\\microsoft.entityframeworkcore.design.3.1.8.nupkg.sha512",
+    "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\3.1.8\\microsoft.entityframeworkcore.inmemory.3.1.8.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.8\\microsoft.entityframeworkcore.relational.3.1.8.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.8\\microsoft.entityframeworkcore.sqlserver.3.1.8.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.8\\microsoft.entityframeworkcore.tools.3.1.8.nupkg.sha512",

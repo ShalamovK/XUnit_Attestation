@@ -2,6 +2,45 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "AutoFixture/4.14.0": {
+        "type": "package",
+        "dependencies": {
+          "Fare": "[2.1.1, 3.0.0)",
+          "System.ComponentModel.Annotations": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoFixture.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoFixture.dll": {}
+        }
+      },
+      "AutoFixture.AutoMoq/4.14.0": {
+        "type": "package",
+        "dependencies": {
+          "AutoFixture": "4.14.0",
+          "Moq": "[4.7.0, 5.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoFixture.AutoMoq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoFixture.AutoMoq.dll": {}
+        }
+      },
+      "AutoFixture.Xunit2/4.14.0": {
+        "type": "package",
+        "dependencies": {
+          "AutoFixture": "4.14.0",
+          "xunit.extensibility.core": "[2.2.0, 3.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoFixture.Xunit2.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoFixture.Xunit2.dll": {}
+        }
+      },
       "AutoMapper/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -48,6 +87,18 @@
         },
         "runtime": {
           "lib/netstandard1.5/Castle.Core.dll": {}
+        }
+      },
+      "Fare/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Fare.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Fare.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.7": {
@@ -3046,6 +3097,7 @@
         "dependencies": {
           "Common": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.8",
+          "Microsoft.EntityFrameworkCore.InMemory": "3.1.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
           "Microsoft.Extensions.Configuration": "3.1.8",
           "Microsoft.Extensions.Configuration.Abstractions": "3.1.8",
@@ -3110,6 +3162,69 @@
     }
   },
   "libraries": {
+    "AutoFixture/4.14.0": {
+      "sha512": "Hs6Tcxd4gVZVPCNhuDccnpaBSvcbi33eIPiwAhKw+WRu5z1ClFIDamkw100oADo8Ay1HchGEBU8klwkJfCDMNg==",
+      "type": "package",
+      "path": "autofixture/4.14.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "autofixture.4.14.0.nupkg.sha512",
+        "autofixture.nuspec",
+        "icon.png",
+        "lib/net452/AutoFixture.dll",
+        "lib/net452/AutoFixture.pdb",
+        "lib/net452/AutoFixture.xml",
+        "lib/netstandard1.5/AutoFixture.dll",
+        "lib/netstandard1.5/AutoFixture.pdb",
+        "lib/netstandard1.5/AutoFixture.xml",
+        "lib/netstandard2.0/AutoFixture.dll",
+        "lib/netstandard2.0/AutoFixture.pdb",
+        "lib/netstandard2.0/AutoFixture.xml"
+      ]
+    },
+    "AutoFixture.AutoMoq/4.14.0": {
+      "sha512": "UnB5s7U0tjdIH11rzaH6FqrLgbH3UC9k3vSiFAigSPOr/BO8pNrq2LvrQna2NW9e0kM170BBx7o7EgikeyLYqQ==",
+      "type": "package",
+      "path": "autofixture.automoq/4.14.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "autofixture.automoq.4.14.0.nupkg.sha512",
+        "autofixture.automoq.nuspec",
+        "icon.png",
+        "lib/net452/AutoFixture.AutoMoq.dll",
+        "lib/net452/AutoFixture.AutoMoq.pdb",
+        "lib/net452/AutoFixture.AutoMoq.xml",
+        "lib/netstandard1.5/AutoFixture.AutoMoq.dll",
+        "lib/netstandard1.5/AutoFixture.AutoMoq.pdb",
+        "lib/netstandard1.5/AutoFixture.AutoMoq.xml",
+        "lib/netstandard2.0/AutoFixture.AutoMoq.dll",
+        "lib/netstandard2.0/AutoFixture.AutoMoq.pdb",
+        "lib/netstandard2.0/AutoFixture.AutoMoq.xml"
+      ]
+    },
+    "AutoFixture.Xunit2/4.14.0": {
+      "sha512": "M/KIIuC8LNFouklHn76gq59fcmMrtJF7hVnCBU2nhPhiR71D0gdibyd7NgL2EmYmc+MdEtMSvrlaPHABrI7q6g==",
+      "type": "package",
+      "path": "autofixture.xunit2/4.14.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "autofixture.xunit2.4.14.0.nupkg.sha512",
+        "autofixture.xunit2.nuspec",
+        "icon.png",
+        "lib/net452/AutoFixture.Xunit2.dll",
+        "lib/net452/AutoFixture.Xunit2.pdb",
+        "lib/net452/AutoFixture.Xunit2.xml",
+        "lib/netstandard1.5/AutoFixture.Xunit2.dll",
+        "lib/netstandard1.5/AutoFixture.Xunit2.pdb",
+        "lib/netstandard1.5/AutoFixture.Xunit2.xml",
+        "lib/netstandard2.0/AutoFixture.Xunit2.dll",
+        "lib/netstandard2.0/AutoFixture.Xunit2.pdb",
+        "lib/netstandard2.0/AutoFixture.Xunit2.xml"
+      ]
+    },
     "AutoMapper/10.0.0": {
       "sha512": "T09NoqMZBqw0/JEauXulxnmmerl0Zj03e0r6VCcJ0LURWBIaYxZPPoiDv8bHf5Y4x2xcXJp4JPXoCaeOMJfHEA==",
       "type": "package",
@@ -3162,6 +3277,21 @@
         "lib/netstandard1.5/Castle.Core.dll",
         "lib/netstandard1.5/Castle.Core.xml",
         "readme.txt"
+      ]
+    },
+    "Fare/2.1.1": {
+      "sha512": "HaI8puqA66YU7/9cK4Sgbs1taUTP1Ssa4QT2PIzqJ7GvAbN1QgkjbRsjH+FSbMh1MJdvS0CIwQNLtFT+KF6KpA==",
+      "type": "package",
+      "path": "fare/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fare.2.1.1.nupkg.sha512",
+        "fare.nuspec",
+        "lib/net35/Fare.dll",
+        "lib/net35/Fare.xml",
+        "lib/netstandard1.1/Fare.dll",
+        "lib/netstandard1.1/Fare.xml"
       ]
     },
     "Microsoft.AspNet.WebApi.Client/5.2.7": {
@@ -9496,6 +9626,9 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "AutoFixture >= 4.14.0",
+      "AutoFixture.AutoMoq >= 4.14.0",
+      "AutoFixture.Xunit2 >= 4.14.0",
       "Common >= 1.0.0",
       "Data >= 1.0.0",
       "Logic >= 1.0.0",
@@ -9572,6 +9705,18 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "AutoFixture": {
+            "target": "Package",
+            "version": "[4.14.0, )"
+          },
+          "AutoFixture.AutoMoq": {
+            "target": "Package",
+            "version": "[4.14.0, )"
+          },
+          "AutoFixture.Xunit2": {
+            "target": "Package",
+            "version": "[4.14.0, )"
+          },
           "Microsoft.AspNetCore.TestHost": {
             "target": "Package",
             "version": "[3.1.8, )"

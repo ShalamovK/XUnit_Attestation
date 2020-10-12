@@ -162,4 +162,9 @@ C:\Users\Kirill\source\repos\XUnitTestApp\Tests\bin\Debug\netcoreapp3.1\Logic.dl
 C:\Users\Kirill\source\repos\XUnitTestApp\Tests\bin\Debug\netcoreapp3.1\XUnitTestWebApp.dll
 C:\Users\Kirill\source\repos\XUnitTestApp\Tests\bin\Debug\netcoreapp3.1\Logic.pdb
 C:\Users\Kirill\source\repos\XUnitTestApp\Tests\bin\Debug\netcoreapp3.1\XUnitTestWebApp.pdb
+C:\Users\Kirill\source\repos\XUnitTestApp\Tests\bin\Debug\netcoreapp3.1\AutoFixture.dll
+C:\Users\Kirill\source\repos\XUnitTestApp\Tests\bin\Debug\netcoreapp3.1\Fare.dll
+C:\Users\Kirill\source\repos\XUnitTestApp\Tests\bin\Debug\netcoreapp3.1\AutoFixture.AutoMoq.dll
+C:\Users\Kirill\source\repos\XUnitTestApp\Tests\bin\Debug\netcoreapp3.1\AutoFixture.Xunit2.dll
 C:\Users\Kirill\source\repos\XUnitTestApp\Tests\obj\Debug\netcoreapp3.1\XUnitTestWebApp.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Kirill\source\repos\XUnitTestApp\Tests\bin\Debug\netcoreapp3.1\xunit.runner.json

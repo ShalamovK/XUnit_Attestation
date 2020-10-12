@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "DtrmvYsBZKXXxLIYMkev/ze3n5uMYW5a3yJI9M3PZhSv9heW0xkHytrRl+j4iasQvtppttlDrQ2iGaw6wTvPDw==",
+  "dgSpecHash": "qtbvJvd2fbTCn8opwd398CICUSnJitDhGpEzijcOBa31fA/nmFANbRxUQiWH1vEmUH/hd/FZlE+6N/Et3wzcJA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kirill\\source\\repos\\XUnitTestApp\\Tests\\XUnitTestWebApp.Tests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Kirill\\.nuget\\packages\\autofixture\\4.14.0\\autofixture.4.14.0.nupkg.sha512",
+    "C:\\Users\\Kirill\\.nuget\\packages\\autofixture.automoq\\4.14.0\\autofixture.automoq.4.14.0.nupkg.sha512",
+    "C:\\Users\\Kirill\\.nuget\\packages\\autofixture.xunit2\\4.14.0\\autofixture.xunit2.4.14.0.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
+    "C:\\Users\\Kirill\\.nuget\\packages\\fare\\2.1.1\\fare.2.1.1.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.aspnet.webapi.core\\5.2.7\\microsoft.aspnet.webapi.core.5.2.7.nupkg.sha512",
     "C:\\Users\\Kirill\\.nuget\\packages\\microsoft.aspnet.webapi.webhost\\5.2.7\\microsoft.aspnet.webapi.webhost.5.2.7.nupkg.sha512",

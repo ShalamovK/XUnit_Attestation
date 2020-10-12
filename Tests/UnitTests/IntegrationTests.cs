@@ -9,12 +9,19 @@ using Logic.Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Moq;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
+using XUnitTestWebApp.Models;
 using XUnitTestWebApp.Tests.Helpers;
 
 namespace XUnitTestWebApp.Tests.UnitTests {
@@ -22,8 +29,8 @@ namespace XUnitTestWebApp.Tests.UnitTests {
         private TestServer _testServer;
 
         private void _SetupClient() {
-            _testServer = new TestServer(new WebHostBuilder().UseStartup<Startup>());
-
+            _testServer = new TestServer(new WebHostBuilder().UseStartup<TestStartup>());
+            
             Client = _testServer.CreateClient();
         }
 
@@ -118,8 +125,8 @@ namespace XUnitTestWebApp.Tests.UnitTests {
 
             Invoice invoice = new Invoice {
                 Id = invoiceId,
-                Lines = new List<InvoiceLine> { 
-                    new InvoiceLine { 
+                Lines = new List<InvoiceLine> {
+                    new InvoiceLine {
                         Qty = 4,
                         Rate = 25m
                     }
@@ -161,6 +168,89 @@ namespace XUnitTestWebApp.Tests.UnitTests {
             paymentServiceMock.Object.ProcessNewPayment(paymentDto);
 
             invoiceServiceMock.Verify(s => s.UpdateInvoiceBalance(It.IsAny<Guid>()));
+        }
+
+        [Fact]
+        public void Test_Delay() {
+            Thread.Sleep(11000);
+
+            Assert.True(true);
+        }
+
+        [Fact]
+        public void Invoice_Details_Page_IsOk() {
+            var invoiceServiceMock = new Mock<IInvoiceService>();
+            invoiceServiceMock.Setup(x => x.GetInvoice(It.IsAny<Guid>())).Returns(new InvoiceDto {
+                Id = Guid.NewGuid(),
+                Lines = new List<InvoiceLineDto> {
+                    new InvoiceLineDto {
+                        Id = Guid.NewGuid(),
+                        Qty = 1,
+                        Rate = 100,
+                        Description = "TEST CHARGE"
+                    }
+                },
+            });
+
+            var webHostBuilder = new WebHostBuilder()
+                .ConfigureTestServices(services => {
+                    services.RemoveAll<IInvoiceService>();//Remove previous registration(s) of this service
+                    services.TryAddTransient<IInvoiceService>(sp => invoiceServiceMock.Object);
+                })
+                .UseStartup<Startup>();
+
+            _testServer = new TestServer(webHostBuilder);
+            Client = _testServer.CreateClient();
+
+            string url = String.Format("http://xunittestapp/Invoice/Details/{0}", Guid.NewGuid().ToString());
+            var task = Client.GetAsync(url);
+            task.Wait();
+
+            HttpResponseMessage result = task.Result;
+
+            Assert.Equal(HttpStatusCode.OK, result.StatusCode);
+        }
+
+        [Fact]
+        public void Invoice_Add_And_Get_IsOk() {
+            string addUrl = "http://xunittestapp/Invoice/CreateInvoice";
+
+            InvoiceViewModel model = new InvoiceViewModel {
+                Lines = new List<InvoiceLineViewModel> {
+                    new InvoiceLineViewModel {
+                        Id = Guid.NewGuid(),
+                        Qty = 1,
+                        Rate = 100,
+                        Description = "TEST CHARGE"
+                    }
+                },
+            };
+
+            string json = JsonConvert.SerializeObject(model);
+            byte[] buffer = Encoding.UTF8.GetBytes(json);
+            var byteContent = new ByteArrayContent(buffer);
+            byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+            Task<HttpResponseMessage> addTask = Client.PostAsync(addUrl, byteContent);
+            addTask.Wait();
+
+            HttpResponseMessage addTaskResult = addTask.Result;
+            var contentTask = addTaskResult.Content.ReadAsStringAsync();
+            contentTask.Wait();
+
+            string data = contentTask.Result;
+            dynamic responseModel = JsonConvert.DeserializeObject(data);
+            Guid id = responseModel.id;
+
+            string getUrl = String.Format("http://xunittestapp/Invoice/Details/{0}", id.ToString());
+
+            Task<HttpResponseMessage> getTask = Client.GetAsync(getUrl);
+            getTask.Wait();
+
+            HttpResponseMessage getTaskResult = getTask.Result;
+
+            Assert.Equal(HttpStatusCode.OK, addTaskResult.StatusCode);
+            Assert.Equal(HttpStatusCode.OK, getTaskResult.StatusCode);
         }
     }
 }

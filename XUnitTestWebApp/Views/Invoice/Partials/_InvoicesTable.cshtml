@@ -4,9 +4,12 @@
 
 <table class="table table-striped">
     <thead>
-        <tr>Id</tr>
-        <tr>Price</tr>
-        <tr>Balance</tr>
+        <tr>
+            <th>Id</th>
+            <th>Price</th>
+            <th>Balance</th>
+            <th></th>
+        </tr>
     </thead>
     <tbody>
         @foreach (var invoice in Model) {
@@ -14,6 +17,12 @@
                 <td>@invoice.Id.ToString()</td>
                 <td>@invoice.Price.ToString("C2")</td>
                 <td>@invoice.Balance.ToString("C2")</td>
+                <td>
+                    <a class="btn btn-success" 
+                       asp-controller="Invoice" 
+                       asp-action="Details"
+                       asp-route-id="@invoice.Id">Details</a>
+                </td>
             </tr>
         }
     </tbody>

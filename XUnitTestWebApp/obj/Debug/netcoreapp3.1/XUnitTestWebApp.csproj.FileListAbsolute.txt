@@ -106,3 +106,6 @@ C:\Users\Kirill\source\repos\XUnitTestApp\XUnitTestWebApp\bin\Debug\netcoreapp3.
 C:\Users\Kirill\source\repos\XUnitTestApp\XUnitTestWebApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Kirill\source\repos\XUnitTestApp\XUnitTestWebApp\obj\Debug\netcoreapp3.1\XUnitTestWebApp.csproj.CoreCompileInputs.cache
 C:\Users\Kirill\source\repos\XUnitTestApp\XUnitTestWebApp\obj\Debug\netcoreapp3.1\XUnitTestWebApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Kirill\source\repos\XUnitTestApp\XUnitTestWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Invoice\Details.cshtml.g.cs
+C:\Users\Kirill\source\repos\XUnitTestApp\XUnitTestWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Partials\_InvoiceBalance.cshtml.g.cs
+C:\Users\Kirill\source\repos\XUnitTestApp\XUnitTestWebApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll

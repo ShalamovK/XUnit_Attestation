@@ -148,6 +148,10 @@
               "target": "Package",
               "version": "[3.1.8, )"
             },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.8, )"
@@ -348,6 +352,18 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoFixture": {
+              "target": "Package",
+              "version": "[4.14.0, )"
+            },
+            "AutoFixture.AutoMoq": {
+              "target": "Package",
+              "version": "[4.14.0, )"
+            },
+            "AutoFixture.Xunit2": {
+              "target": "Package",
+              "version": "[4.14.0, )"
+            },
             "Microsoft.AspNetCore.TestHost": {
               "target": "Package",
               "version": "[3.1.8, )"

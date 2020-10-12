@@ -74,6 +74,13 @@ namespace Data.Repos.Base {
             }
         }
 
+        public TEnt GetById(TKey id) {
+            Expression<Func<TEnt, bool>> predicate =
+                x => x.Id.Equals(id);
+
+            return GetByExpression(predicate);
+        }
+
         public TEnt GetById(TKey id, IEnumerable<Expression<Func<TEnt, object>>> includeProperties = null, bool localOnly = false) {
             Expression<Func<TEnt, bool>> predicate =
                 x => x.Id.Equals(id);

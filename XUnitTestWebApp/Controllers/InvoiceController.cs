@@ -18,6 +18,13 @@ namespace XUnitTestWebApp.Controllers {
             return View();
         }
 
+        public IActionResult Details(Guid id) {
+            InvoiceDto invoiceDto = _serviceHost.GetRequiredService<IInvoiceService>().GetInvoice(id);
+            InvoiceViewModel invoiceViewModel = _mapper.Map<InvoiceViewModel>(invoiceDto);
+
+            return View(invoiceViewModel);
+        }
+
         [HttpPost]
         public JsonResult CreateInvoice(InvoiceViewModel invoice) {
             InvoiceDto invoiceDto = _mapper.Map<InvoiceDto>(invoice);
@@ -27,7 +34,7 @@ namespace XUnitTestWebApp.Controllers {
             if (newId == null) {
                 return Json("error");
             } else {
-                return Json("success");
+                return Json(new { Result = "success", Id = newId });
             }
         }
 

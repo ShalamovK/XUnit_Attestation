@@ -17,6 +17,7 @@ namespace Common.Contracts.Repos.Base {
         void DeleteRange(IEnumerable<TKey> ids);
         EntityEntry<TEntity> GetEntry(TEntity entity);
         IQueryable<TEntity> GetAll(IEnumerable<Expression<Func<TEntity, object>>> includeProperties = null);
+        TEntity GetById(TKey id);
         TEntity GetById(TKey id, IEnumerable<Expression<Func<TEntity, object>>> includeProperties = null, bool localOnly = false);
         //IQueryable<TEntity> Get(out int total, string orderBy, int skip, int take = 0, bool descOrder = true, IEnumerable<Expression<Func<TEntity, bool>>> conditions = null, IEnumerable<Expression<Func<TEntity, object>>> includeProperties = null);
         void Load(Expression<Func<TEntity, bool>> condition = null);
